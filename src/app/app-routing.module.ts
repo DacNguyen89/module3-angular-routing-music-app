@@ -9,10 +9,11 @@ const routes: Routes = [
     path: 'youtube',
     component: YoutubePlaylistComponent,
     children: [{
-      path: 'id',
+      path: ':id',
       component: YoutubePlayerComponent
     }]
-  }];
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
@@ -20,4 +21,5 @@ const routes: Routes = [
   })],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
